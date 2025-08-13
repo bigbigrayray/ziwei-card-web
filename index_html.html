@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫微斗數 - 今日運勢抽卡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 頁面標題 -->
+        <div class="header">
+            <h1 class="title">紫微斗數運勢抽卡</h1>
+            <p class="subtitle">選擇運勢類別，抽取今日專屬運勢指引</p>
+        </div>
+
+        <!-- 運勢選擇器 -->
+        <div class="fortune-selector">
+            <button class="fortune-btn active" data-type="work">工作運勢</button>
+            <button class="fortune-btn" data-type="love">感情運勢</button>
+            <button class="fortune-btn" data-type="money">財運運勢</button>
+        </div>
+
+        <!-- 抽卡區域 -->
+        <div class="draw-section">
+            <button class="draw-btn" id="drawBtn">開始抽卡</button>
+            <div class="daily-limit-msg" id="limitMsg" style="display: none;">
+                今日已抽過卡，明日再來試試運氣吧！
+            </div>
+        </div>
+
+        <!-- 卡牌顯示區 -->
+        <div class="card-container" id="cardContainer">
+            <div class="card" id="mainCard">
+                <div class="card-inner">
+                    <div class="card-face card-back">
+                        主星
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="star-name" id="mainStarName"></div>
+                        <div class="star-type">十四主星</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="supportCard">
+                <div class="card-inner">
+                    <div class="card-face card-back">
+                        輔助星
+                    </div>
+                    <div class="card-face card-front">
+                        <div class="star-name" id="supportStarName"></div>
+                        <div class="star-type">輔助星曜</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 運勢結果顯示區 -->
+        <div class="result-section" id="resultSection">
+            <div class="fortune-result">
+                <h2 class="fortune-title" id="fortuneTitle">今日運勢解析</h2>
+                
+                <div class="main-star-result">
+                    <div class="star-header" id="mainStarHeader"></div>
+                    <div class="star-description" id="mainStarDesc"></div>
+                </div>
+
+                <div class="support-star-result">
+                    <div class="star-header" id="supportStarHeader"></div>
+                    <div class="star-description" id="supportStarDesc"></div>
+                </div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn">重新選擇運勢</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
